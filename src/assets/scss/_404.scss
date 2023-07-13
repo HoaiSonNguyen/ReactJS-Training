@@ -1,0 +1,37 @@
+.content {
+
+    &-404 {
+        text-align: center;
+        padding-top: 100px;
+        height: 75vh;
+
+        &__title {
+            font-size: 40px;
+            padding: 0 30px;
+        }
+
+        &__text {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #ccc;
+            padding: 40px 30px;
+        }
+
+        &__btn {
+            color: #000;
+            text-decoration: none;
+            padding: 10px 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            opacity: 1;
+            &:hover {
+                opacity: .8;
+                transition: all .3s ease;
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+}

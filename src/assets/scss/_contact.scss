@@ -1,0 +1,241 @@
+.wpcf7-textarea {
+    resize: vertical;
+}
+
+.contact-title {
+    margin: 100px 0 50px;
+    text-align: center;
+    padding: 0 50px;
+    text-transform: uppercase;
+}
+
+.contact-text {
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.contact-btn {
+        padding: 10px 80px;
+        background-color: #fff;
+        color: #000;
+        font-weight: bold;
+        border-radius: 2px;
+        border: 1px solid #0000008f;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 1;
+        &:hover {
+            opacity: .8;
+            transition: all .3s ease;
+            background-color: #0000008f;
+            color: #fff;
+            border: none;
+        }
+}
+
+.form-7 {
+    padding: 50px 0 0 50px;
+}
+
+.label-form {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+
+    .form_title {
+        flex: 0 0 30%;
+        font-weight: bold;
+        padding: 10px 0 5px 130px;
+    }
+
+    .form_requie {
+        color: red;
+    }
+
+    .form_content {
+        flex: 0 0 70%;
+        
+        .wpcf7-form-control {
+            width: 80%;
+            padding: 10px 10px;
+            border: 1px solid #fcaf3b;
+            border-radius: 2px;
+            background-color: #b7dcf7;
+        }
+
+        .wpcf7-textarea {
+            margin-top: 10px;
+        }
+
+        .wpcf7-select {
+            width: 80%;
+        }
+
+    }
+
+    .form_content2 {
+
+        .wpcf7-form-control-wrap {
+
+            .wpcf7-radio {
+                width: 80%; 
+                display: flex;
+    
+                .wpcf7-list-item {
+                    flex: 0 0 100%;
+                    margin-left: 5px;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+
+    .form_radio {
+        flex: 0 0 70%;
+
+        i {
+            font-size: 10px;
+            border: 1px solid #fcaf3b;
+            border-radius: 50%;
+            padding: 3px 4px 3px 4px;
+            background-color: #f7ead8;
+            margin-top: 8px;
+        }
+    }
+}
+
+.btn-submit {
+    text-align: center;
+    padding: 0 30px 50px;
+
+    .form-submit {
+        color: #fff;
+    
+        .wpcf7-submit {
+            color: #fff;
+            background-color: #000;
+            border: none;
+            padding: 12px 90px;
+            border-radius: 2px;
+            font-weight: bold;
+            width: 35%;
+            cursor: pointer;
+            opacity: 1;
+            &:hover{
+                opacity: .8;
+                transition: all .3s ease;
+            }
+        }
+    }
+}
+
+.form-back {
+    float: left;
+    padding-left: 343px;
+
+    .wpcf7-previous {
+        color: #000;
+        background-color: #fff;
+        font-weight: bold;
+        padding: 11px 100px;
+        border: 1px solid #0000008f;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-top: 15px;
+
+        &:hover{
+            background-color: #0000008f;
+            color: #fff;
+        }
+    }
+}
+
+.form-submit2 {
+    color: #fff;
+    float: right;
+    padding-right: 240px;
+    margin-top: -21px;
+
+    .wpcf7-submit {
+        color: #fff;
+        background-color: #005fa5;
+        border: none;
+        padding: 12px 100px;
+        border-radius: 2px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover{
+            opacity: .8;
+        }
+    }
+}
+
+.dnd-upload-status {
+    width: 80%;
+}
+
+// MultiForm
+.form_multi {
+    border: 1px solid #fcaf3b;
+    border-radius: 2px;
+    padding: 10px;
+    max-width: 56%;
+    background-color: #f7ead8;
+
+    i {
+        float: right;
+        font-weight: bold;
+    }
+}
+
+.form_multi2 {
+    border: 1px dashed #fcaf3b;
+    border-radius: 2px;
+    padding: 10px;
+    max-width: 56%;
+    background-color: #f7ead8;
+}
+
+.codedropz-upload-handler {
+    width: 80%;
+    border: 2px dashed #fcaf3b;
+}
+
+.codedropz-upload-inner{
+    
+    h3 {
+        font-size: 20px;
+        font-weight: 100;
+    }
+
+    span {
+        color: #ccc;
+    }
+} 
+
+.codedropz-btn-wrap {
+
+    a.cd-upload-btn {
+        color: #ccc;
+    }
+} 
+
+.dnd-upload-counter {
+    color: #ccc;
+}
+
+.btn {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.container-tks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 83vh;
+}

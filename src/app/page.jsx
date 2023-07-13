@@ -1,65 +1,9 @@
-'use client'
-
-import Image from 'next/image'
-import { useEffect, useState } from 'react';
+import Image from "next/image"
+import Link from 'next/link'
 
 export default function Home() {
-  const [showMenuSP, setShowMenuSP] = useState(false)
-
-
-  // useEffect(() => {
-  // }, [])
-  const handleMenuSP = () => {
-    setShowMenuSP(!showMenuSP)
-  }
   return (
     <main>
-      <div className="header">
-        <div className="container">
-          <div className="header-logo">
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/home/logo.png"
-                alt="Neve Logo"
-                width={0}
-                height={0}
-                priority
-                sizes='100vw'
-              />
-            </a>
-          </div>
-
-          <div className={`header-nav ${showMenuSP ? 'show_memu' : ''}`} >
-            <ul>
-              <li><a>Home</a></li>
-              <li><a>About</a></li>
-              <li><a>Company</a></li>
-              <li><a>Product</a></li>
-              <li><a>Blog</a></li>
-            </ul>
-            <div className='header-btn'>
-              <a className='header-btn--contact'>Contact</a>
-            </div>
-          </div>
-
-          <div className={`menubar-sp ${showMenuSP ? 'show_memu' : ''}`} onClick={handleMenuSP}>
-            {
-              showMenuSP ? (
-                <i class="fa fa-close" />
-              )
-                : (
-                  <i className="fa fa-bars" />
-                )
-            }
-            {/* <i className="fa fa-bars" aria-hidden="true"></i> */}
-          </div>
-        </div>
-      </div>
-
       <div className="sitebar">
         <div className="sitebar-list">
           <h1 className="sitebar-list__title">Simple design and your
@@ -101,14 +45,16 @@ export default function Home() {
               <Image
                 className="content-list--item__img"
                 src="/home/icon1.png"
-                alt="Neve Logo"
+                alt="icon1"
                 width={96}
                 height={96}
               />
             </figure>
-            <a href=""><h3 className="content-list--item__title">Point 1</h3></a>
+            <Link href='/about#point1'>
+              <h3 className="content-list--item__title">Point 1</h3>
+            </Link>
             <p className="content-list--item__text">Lorem ipsum dolor sit amet elit do, consectetur adipiscing, sed eiusmod tempor.</p>
-            <a href="/about#point1" className="content-list--item-btn" >Learn more</a>
+            <Link href='/about#point1' className="content-list--item-btn">Learn more</Link>
           </div>
 
           <div className="content-list--item">
@@ -116,14 +62,16 @@ export default function Home() {
               <Image
                 className="content-list--item__img"
                 src="/home/icon2.png"
-                alt="Neve Logo"
+                alt="icon2"
                 width={96}
                 height={96}
               />
             </figure>
-            <a href=""><h3 className="content-list--item__title">Point 1</h3></a>
+            <Link href='/about#point2'>
+              <h3 className="content-list--item__title">Point 2</h3>
+            </Link>
             <p className="content-list--item__text">Lorem ipsum dolor sit amet elit do, consectetur adipiscing, sed eiusmod tempor.</p>
-            <a href="/about#point1" className="content-list--item-btn" >Learn more</a>
+            <Link href='/about#point2' className="content-list--item-btn">Learn more</Link>
           </div>
 
           <div className="content-list--item">
@@ -131,14 +79,16 @@ export default function Home() {
               <Image
                 className="content-list--item__img"
                 src="/home/icon3.png"
-                alt="Neve Logo"
+                alt="icon3"
                 width={96}
                 height={96}
               />
             </figure>
-            <a href=""><h3 className="content-list--item__title">Point 1</h3></a>
+            <Link href='/about#point3'>
+              <h3 className="content-list--item__title">Point 3</h3>
+            </Link>
             <p className="content-list--item__text">Lorem ipsum dolor sit amet elit do, consectetur adipiscing, sed eiusmod tempor.</p>
-            <a href="/about#point1" className="content-list--item-btn" >Learn more</a>
+            <Link href='/about#point3' className="content-list--item-btn">Learn more</Link>
           </div>
         </div>
 
@@ -149,16 +99,17 @@ export default function Home() {
         <div className="list-post">
           <div className="list-post_child">
             <div className="list-post_child-img">
-              <figure>
+              <Link href='/blog/detail'>
                 <Image
-                  src="/home/list-cont-1.jpg"
-                  alt="Neve Logo"
-                  width={400}
-                  height={400}
+                  src="/blog/list-cont-1.jpg"
+                  alt="list-cont-1"
+                  width={0}
+                  height={0}
+                  sizes='100vw'
                 />
-              </figure>
+              </Link>
             </div>
-            <h3 className="list-post_child-title"><a href="">Saepe cupiditate unde autem aut eum.</a></h3>
+            <h3 className="list-post_child-title"><Link href='/blog/detail'>Saepe cupiditate unde autem aut eum.</Link></h3>
             <div className="list-post_child-content">
               <p>Ut eligendi exercitationem possimus sed et et. Et nihil beatae sunt molestiae ut commodi animi. Dolores repellat et voluptate quis. Quia esse</p>
             </div>
@@ -166,56 +117,23 @@ export default function Home() {
 
           <div className="list-post_child">
             <div className="list-post_child-img">
-              <figure>
+              <Link href='/blog/detail'>
                 <Image
-                  src="/home/list-cont-2.jpg"
-                  alt="Neve Logo"
-                  width={400}
-                  height={400}
+                  src="/blog/list-cont-2.jpg"
+                  alt="list-cont-2"
+                  width={0}
+                  height={0}
+                  sizes='100vw'
                 />
-              </figure>
+              </Link>
             </div>
-            <h3 className="list-post_child-title"><a href="">Et atque quis quisquam ut fugiat quia.</a></h3>
+            <h3 className="list-post_child-title"><Link href='/blog/detail'>Et atque quis quisquam ut fugiat quia.</Link></h3>
             <div className="list-post_child-content">
               <p>Rerum consequatur et nobis ut. Sapiente repudiandae voluptatem facere facere aliquam dolores. Nesciunt quia ut eum consequatur odio</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="footer">
-        <div className="container">
-          <div className="footer-logo">
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/home/logo.png"
-                alt="Neve Logo"
-                width={0}
-                height={0}
-                priority
-                sizes='100vw'
-              />
-            </a>
-          </div>
-          <div className="footer-nav">
-            <ul>
-              <li><a>Home</a></li>
-              <li><a>About</a></li>
-              <li><a>Company</a></li>
-              <li><a>Product</a></li>
-              <li><a>Blog</a></li>
-            </ul>
-          </div>
-          <div className="footer-bottom">
-            <p className="footer-bottom__text"><i className="fa fa-copyright" aria-hidden="true"></i> Coppyright by Son</p>
-          </div>
-        </div>
-      </div>
-
     </main>
   )
 }
