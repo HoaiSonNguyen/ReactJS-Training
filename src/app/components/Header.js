@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
 const Header = () => {
 
@@ -51,10 +52,12 @@ const Header = () => {
                 <div className={`menubar-sp ${showMenuSP ? 'show_memu' : ''}`} onClick={handleMenuSP}>
                     {
                         showMenuSP ? (
-                            <i class="fa fa-close" />
+                            // <i class="fa fa-close" />
+                            <AiOutlineClose />
                         )
                             : (
-                                <i className="fa fa-bars" />
+                                // <i className="fa fa-bars" />
+                                <AiOutlineMenu />
                             )
                     }
                 </div>

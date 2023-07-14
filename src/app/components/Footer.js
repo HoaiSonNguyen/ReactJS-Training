@@ -1,6 +1,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image';
+import { AiOutlineCopyrightCircle } from 'react-icons/ai'
 
 const Footer = () => {
     return (
@@ -34,7 +35,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="footer-bottom">
-                    <p className="footer-bottom__text"><i className="fa fa-copyright" aria-hidden="true"></i> Coppyright by Son</p>
+                    <p className="footer-bottom__text"><AiOutlineCopyrightCircle /> Coppyright by Son</p>
                 </div>
             </div>
         </div>
