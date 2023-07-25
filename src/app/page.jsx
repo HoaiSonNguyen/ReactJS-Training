@@ -1,10 +1,49 @@
+'use client'
 import Image from "next/image"
 import Link from 'next/link'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Content from '@/app/components/Content'
 
-export default function Home() {
+async function getData() {
+  let data = null
+  const res = await axios.get('http://bai-tap3/wp-json/wp/v2/posts?_embed&order=desc&status=publish').then(response => {
+    data = response.data
+  });
+  return data
+}
+
+// const PageName = () => {
+//   const [ variableNameTwo, setVariableNameTwo] = useState([]);
+//   useEffect(() => {
+//           setLoading(true);
+//           const fetchBlogData = async () => {
+//               const blgData = await fetch(
+//                   'https://your-wp-domain-url.com/wp-json/wp/v2/posts?_embed&order=desc&status=publish'
+//               );
+//               const blgJsnData = await blgData.json();
+//               setBlogData(blgJsnData);
+//               setLoading(false);
+//           };
+//           fetchBlogData();
+//       }, []);
+//       return (
+//            <ComponentName variableNameTwo={variableNameTwo} />
+//       )
+//   }
+
+export default async function Home() {
+  // const [show, setShow] = useState(false)
+  const datas = await getData()
+
   return (
     <main>
-      <div className="sitebar">
+      <ul>
+        {datas.map(data => (
+          <li key={data.id}>{data.title.rendered}</li>
+        ))}
+      </ul>
+      {/* <div className="sitebar">
         <div className="sitebar-list">
           <h1 className="sitebar-list__title">Simple design and your
             unique website today</h1>
@@ -132,8 +171,16 @@ export default function Home() {
               <p>Rerum consequatur et nobis ut. Sapiente repudiandae voluptatem facere facere aliquam dolores. Nesciunt quia ut eum consequatur odio</p>
             </div>
           </div>
-        </div>
-      </div>
+        </div> */}
+
+      {/* <div style={{ padding: 100 }}>
+        <button onClick={() => setShow(!show)}>Toggle</button>
+        {show && <Content />}
+      </div> */}
+
+      {/* </div> */}
     </main>
   )
 }
+
+

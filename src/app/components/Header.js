@@ -52,7 +52,7 @@ const Header = () => {
                 <div className={`menubar-sp ${showMenuSP ? 'show_memu' : ''}`} onClick={handleMenuSP}>
                     {
                         showMenuSP ? (
-                            // <i class="fa fa-close" />
+                            // <i className="fa fa-close" />
                             <AiOutlineClose />
                         )
                             : (
