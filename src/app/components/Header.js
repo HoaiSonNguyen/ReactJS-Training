@@ -5,26 +5,37 @@ import Image from 'next/image';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
 const Header = () => {
-
+    //Nav
     const [showMenuSP, setShowMenuSP] = useState(false)
-
     const handleMenuSP = () => {
         setShowMenuSP(!showMenuSP)
     }
+
+    //Logo
+    const [headers, setHeaders] = useState({})
+    useEffect(() => {
+        fetch("http://bai-tap3/wp-json/wp/v2/header")
+            .then(res => res.json())
+            .then(response => {
+                setHeaders(response);
+            })
+    }, [])
 
     return (
         <div className="header">
             <div className="container">
                 <div className="header-logo">
                     <Link href='/'>
-                        <Image
-                            src="/home/logo.png"
-                            alt="Neve Logo"
-                            width={0}
-                            height={0}
-                            priority
-                            sizes='100vw'
-                        />
+                        {headers.src_logo &&
+                            <Image
+                                src={headers.src_logo}
+                                alt="Neve Logo"
+                                width={0}
+                                height={0}
+                                priority
+                                sizes='100vw'
+                            />
+                        }
                     </Link>
                 </div>
 
@@ -43,9 +54,11 @@ const Header = () => {
                         </Link></li>
                     </ul>
                     <div className='header-btn'>
-                        <Link href='/contact' className='header-btn--contact'>
-                            Contact
-                        </Link>
+                        {headers.btn_contact_link &&
+                            <Link href={headers.btn_contact_link} className='header-btn--contact'>
+                                {headers.btn_contact_text}
+                            </Link>
+                        }
                     </div>
                 </div>
 
