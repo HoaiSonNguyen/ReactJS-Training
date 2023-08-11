@@ -73,6 +73,11 @@
             width: 80%;
         }
 
+        //Update
+        p {
+            color: #dc3232;
+        }
+
     }
 
     .form_content2 {
@@ -87,6 +92,10 @@
                     flex: 0 0 100%;
                     margin-left: 5px;
                     padding: 10px 0;
+                    //Update
+                    input {
+                        margin-right: 5px;
+                    }
                 }
             }
         }

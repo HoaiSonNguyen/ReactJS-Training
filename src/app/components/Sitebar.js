@@ -15,7 +15,7 @@ export default async function Sitebar() {
         <main>
 
             <div className="sitebar-list">
-                <h1 className="sitebar-list__title">{sitebars.title}</h1>
+                <h1 className="sitebar-list__title" dangerouslySetInnerHTML={{ __html: sitebars.title }}></h1>
                 <p className="sitebar-list__text">{sitebars.description}</p>
                 <div className="sitebar-list__btn-parent">
                     <a className="sitebar-list__btn--textone sitebar-list__btn" >{sitebars.text_btn1}</a>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 
 export default function Thank() {
-    // Blog Page
+    // Thankyou Page
     const [thanks, setThanks] = useState({})
 
     useEffect(() => {
