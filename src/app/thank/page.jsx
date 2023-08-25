@@ -19,7 +19,7 @@ export default function Thank() {
             <div className="container">
                 <div className="container-tks">
                     <h1 className="contact-title">{thanks.title}</h1>
-                    <p className='contact-text'>{thanks.contact_text}</p>
+                    <p className='contact-text' dangerouslySetInnerHTML={{ __html: thanks.contact_text }}></p>
                     <div className="btn">
                         <Link href='/' className="contact-btn">{thanks.contact_btntext}</Link>
                     </div>
